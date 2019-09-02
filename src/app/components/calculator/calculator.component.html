@@ -1,0 +1,44 @@
+<ion-list-header>SYSTEM OF MEASUREMENT</ion-list-header>
+<ion-segment [(ngModel)]="sysMeasure" ionChange="onChange($event)">
+  <ion-segment-button value="standard">
+    <ion-label>STANDARD</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="metric">
+    <ion-label>METRIC</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<ion-list-header>TIRE USE</ion-list-header>
+<ion-segment  [(ngModel)]="roadType" ionChange="onChange($event)">
+  <ion-segment-button value="onRoad">
+    <ion-label>ON ROAD</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="offRoad">
+    <ion-label>OFF ROAD</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<ion-item>
+  <ion-label position="floating">Tire Width</ion-label>
+  <ion-input type="number"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Rim / Wheel Size</ion-label>
+  <ion-input type="number"></ion-input>
+</ion-item>
+
+<br>
+<div text-center>
+  <ion-button>CALCULATE</ion-button>
+</div>
+<br>
+
+<ion-list>
+  <ion-item>
+    <ion-label>Calculated Fluid Oz: {{fluidOz}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Suggested Application Amount in Oz: {{applicationOz}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Hand Pumps: {{handPumps}}</ion-label>
+  </ion-item>
+</ion-list>
