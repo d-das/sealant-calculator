@@ -10,4 +10,24 @@
   <div class="ion-padding">
     <app-calculator></app-calculator>
   </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-button icon-only item-right (click)="presentInstructions()" color="light">
+            <ion-icon color="primary" name="help-circle-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-button icon-only item-right (click)="presentContact()" color="light">
+            <ion-icon color="primary" name="at"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -31,32 +31,36 @@ export class CalculatorComponent implements OnInit {
   ngOnInit() {}
 
   calculate(){
-  if(this.sysMeasure == "metric"){
-    this.sWidth=this.width*this.factorD;
-    this.sRim=this.rim*this.factorD;
-  }
-  else{
-    this.sWidth = this.width;
-    this.sRim = this.rim
-  }
-  let x:number = (this.sWidth*this.sRim)*this.factorA;
-  if(this.roadType == "offRoad"){
-    console.log("x:", x);
-    this.fluidOz = x*this.factorB;
-  }
-  else{
-    this.fluidOz =x;
-  }
-  this.applicationOz = Math.ceil(this.fluidOz/4)*4;
-  this.handPumps = this.applicationOz/this.factorC;
+    if(this.sysMeasure == "metric"){
+      this.sWidth=this.width*this.factorD;
+      this.sRim=this.rim*this.factorD;
+    }
+    else{
+      this.sWidth = this.width;
+      this.sRim = this.rim
+    }
+    let x:number = (this.sWidth*this.sRim)*this.factorA;
+    if(this.roadType == "offRoad"){
+      console.log("x:", x);
+      this.fluidOz = x*this.factorB;
+    }
+    else{
+      this.fluidOz =x;
+    }
+    this.applicationOz = Math.ceil(this.fluidOz/4)*4;
+    this.handPumps = this.applicationOz/this.factorC;
 
-  //round out the floats
-  this.fluidOz = parseFloat(this.fluidOz.toFixed(1));
-  this.handPumps = parseFloat(this.handPumps.toFixed(1));
-  console.log("fluidOz:", this.fluidOz);
-  console.log("handPumps:", this.handPumps);
+    //round out the floats
+    this.fluidOz = parseFloat(this.fluidOz.toFixed(1));
+    this.handPumps = parseFloat(this.handPumps.toFixed(1));
+    console.log("fluidOz:", this.fluidOz);
+    console.log("handPumps:", this.handPumps);
 
-}
+  }
+
+  poop(){
+    console.log("message");
+  }
 
   ngDoCheck(){
     this.ticker += 1;
