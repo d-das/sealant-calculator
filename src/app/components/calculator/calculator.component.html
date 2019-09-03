@@ -18,17 +18,16 @@
 </ion-segment>
 <ion-item>
   <ion-label position="floating">Tire Width</ion-label>
-  <ion-input type="number"></ion-input>
+  <ion-input ion-input type="tel"
+[(ngModel)]="width"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label position="floating">Rim / Wheel Size</ion-label>
-  <ion-input type="number"></ion-input>
+  <ion-input type="number" [(ngModel)]="rim"></ion-input>
 </ion-item>
 
 <br>
-<div text-center>
-  <ion-button>CALCULATE</ion-button>
-</div>
+<br>
 <br>
 
 <ion-list>
