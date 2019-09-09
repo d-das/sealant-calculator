@@ -10,7 +10,6 @@ import { ModalController } from '@ionic/angular';
 export class InstructionsPage implements OnInit {
   public language:string = "english";
   public langBool:boolean = true;
-  public ticker: number = 0;
 
   constructor(public modalCtrl: ModalController) { }
 
@@ -24,10 +23,6 @@ export class InstructionsPage implements OnInit {
     else{
       this.langBool = true;
     }
-    this.ticker += 1;
-    console.log("2ticker:", this.ticker);
-    console.log("language:", this.language);
-    console.log("langBool:", this.langBool);
   }
 
   dismiss() {

@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { ContactPage } from './contact/contact.page';
 import { InstructionsPage } from './instructions/instructions.page';
+import { PopoverComponent } from './components/popover/popover.component';
 
 import { FormsModule } from '@angular/forms';
 
@@ -19,11 +20,13 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     ContactPage,
-    InstructionsPage
+    InstructionsPage,
+    PopoverComponent
   ],
   entryComponents: [
     ContactPage,
-    InstructionsPage
+    InstructionsPage,
+    PopoverComponent
   ],
   imports: [
     BrowserModule,

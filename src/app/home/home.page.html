@@ -3,6 +3,10 @@
     <ion-title>
       Sealant Calculator
     </ion-title>
+
+    <ion-button fill="clear" slot="end"(click)="presentPopover($event)">
+        <ion-icon name="menu"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -10,7 +14,7 @@
   <div class="ion-padding">
     <app-calculator></app-calculator>
   </div>
-  <ion-grid>
+  <!-- <ion-grid>
     <ion-row>
       <ion-col></ion-col>
       <ion-col>
@@ -29,5 +33,5 @@
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
 </ion-content>

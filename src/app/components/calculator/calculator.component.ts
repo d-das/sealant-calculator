@@ -24,7 +24,6 @@ export class CalculatorComponent implements OnInit {
   public fluidOz: number = 0;
   public handPumps: number = 0;
   public applicationOz: number = 0;
-  public ticker: number = 0;
 
   constructor() { }
 
@@ -58,13 +57,7 @@ export class CalculatorComponent implements OnInit {
 
   }
 
-  poop(){
-    console.log("message");
-  }
-
   ngDoCheck(){
-    this.ticker += 1;
     this.calculate();
-    console.log("ticker:", this.ticker);
   }
 }

@@ -1,17 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="ion-text-end">
-      <ion-button size="small" shape="round" icon-only item-right (click)="dismiss()">
-        <ion-icon name="close"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-button color="dark" (click)="dismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Contact
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
   <ion-list>
-    <ion-list-header>
-      Contact Us
-    </ion-list-header>
     <ion-item>
       <ion-icon slot="start" name="globe"></ion-icon>
       <ion-label>website: <a href="https://www.isealtires.com">isealtires.com</a></ion-label>

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { ContactPage } from '../contact/contact.page';
-import { InstructionsPage } from '../instructions/instructions.page';
+import { PopoverController } from '@ionic/angular';
+import { PopoverComponent } from '../components/popover/popover.component';
+
 
 @Component({
   selector: 'app-home',
@@ -9,23 +10,36 @@ import { InstructionsPage } from '../instructions/instructions.page';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor(public modalCtrl: ModalController) {
-
+  public currentPopover = null;
+  constructor(
+    public modalCtrl: ModalController,
+    public popoverCtrl: PopoverController) {
   }
 
-  async presentInstructions() {
-    const modal = await this.modalCtrl.create({
-      component: InstructionsPage
+
+
+  async presentPopover(event: any) {
+    console.log("event:", event);
+    const popover = await this.popoverCtrl.create({
+      component: PopoverComponent,
+      event: event,
+      translucent: true,
+      cssClass: 'custom-popover'
     });
-    return await modal.present();
+    this.currentPopover = popover;
+    return await popover.present();
   }
 
-  async presentContact() {
-    const modal = await this.modalCtrl.create({
-      component: ContactPage
-    });
-    return await modal.present();
+  dismissPopover(){
+    console.log("dismissPopover");
+    if(this.currentPopover){
+      this.currentPopover.dismiss().then(() => { this.currentPopover = null; })
+    }
+  }
+
+  ionViewWillLeave(){
+    console.log("ionViewWillLeave");
+    this.dismissPopover();
   }
 
 }

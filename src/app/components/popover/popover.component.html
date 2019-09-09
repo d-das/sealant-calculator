@@ -1,0 +1,11 @@
+<ion-list>
+  <ion-item button item-right (click)="presentInstructions()" color="light">
+    <ion-icon color="primary" name="help-circle"></ion-icon>
+    Instructions
+  </ion-item>
+  <ion-item button icon-only item-right (click)="presentContact()" color="light">
+    <ion-icon color="primary" name="at"></ion-icon>
+    Contact
+  </ion-item>
+</ion-list>
+<ion-button expand="block" (click)="dismissPopover()">Close</ion-button>
