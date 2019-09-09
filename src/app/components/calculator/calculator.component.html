@@ -26,18 +26,20 @@
   <ion-input type="number" [(ngModel)]="rim"></ion-input>
 </ion-item>
 
-<br>
-<br>
 
-
-<ion-list>
-  <ion-item>
-    <ion-label>Calculated Fluid Oz: {{fluidOz}}</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>Suggested Application Amount in Oz: {{applicationOz}}</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>Hand Pumps: {{handPumps}}</ion-label>
-  </ion-item>
-</ion-list>
+<div >
+  <ion-list>
+    <ion-item color="light">
+      <ion-label>Calculated Fluid Oz:</ion-label>
+      <ion-note slot="end" color="primary"><h4>{{fluidOz}}</h4></ion-note>
+    </ion-item>
+    <ion-item color="light">
+      <ion-label>Application Amount in Oz:</ion-label>
+      <ion-note slot="end" color="primary"><h4>{{applicationOz}}</h4></ion-note>
+    </ion-item>
+    <ion-item color="light">
+      <ion-label>Hand Pumps:</ion-label>
+      <ion-note slot="end" color="primary"><h4>{{handPumps}}</h4></ion-note>
+    </ion-item>
+  </ion-list>
+</div>

@@ -1,5 +1,7 @@
 {
   "name": "sealant-calculator",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

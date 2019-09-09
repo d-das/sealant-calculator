@@ -9,5 +9,36 @@
 </ion-header>
 
 <ion-content>
-  Application Instructions
+  <ion-segment [(ngModel)]="language" ionChange="onChange($event)">
+    <ion-segment-button value="english">
+      <ion-label>ENGLISH</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="spanish">
+      <ion-label>ESPAÑOL</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div *ngIf="langBool">
+  <ion-list-header>Directions</ion-list-header>
+  <ion-list>
+    <ion-item><ion-text color="primary">1&nbsp;&nbsp;</ion-text>Refer to the Application Calculator to determine recommended fill amount for your tire/wheel.</ion-item>
+    <ion-item><ion-text color="primary">2&nbsp;&nbsp;</ion-text>Assure equipment is safely supported such that the weight of the equipment will not rest on the deflated tire.</ion-item>
+    <ion-item><ion-text color="primary">3&nbsp;&nbsp;</ion-text>Position valve stem between 10 and 2 o'clock, attach tube to bottle tip and remove valve core to deflated tire.</ion-item>
+    <ion-item><ion-text color="primary">4&nbsp;&nbsp;</ion-text>Install sealant and reinstall the valve core. <ion-text color="danger">DO NOT install more than the recommended amount for high speed applications</ion-text>.</ion-item>
+    <ion-item><ion-text color="primary">5&nbsp;&nbsp;</ion-text>Inflate tire to tire manufactures recommended pressure and reinstall valve stem cap.</ion-item>
+    <ion-item><ion-text color="primary">6&nbsp;&nbsp;</ion-text>Immediately rotate or move/drive equipment to seal any existing punctures, especially if any objects are removed after installing sealant.</ion-item>
+  </ion-list>
+</div>
+
+<div *ngIf="!langBool">
+  <ion-list-header>Direcciones</ion-list-header>
+  <ion-list>
+    <ion-item><ion-text color="primary">1&nbsp;&nbsp;</ion-text>Consulte la Calculadora de Aplicación para determinar la cantidad de llenado recomendada para su neumático / reuda.</ion-item>
+    <ion-item><ion-text color="primary">2&nbsp;&nbsp;</ion-text>Asegurar que el equipo esté soportado con seguridad de tal manera que el peso del equipo no se apoye en el neumático defectuoso.</ion-item>
+    <ion-item><ion-text color="primary">3&nbsp;&nbsp;</ion-text>Coloque el vástago de la válvula entre las 10 y las 2 horas, fije el tubo a la punta de la botella y retire el núcleo de la válvula para desinfectar el neumático.</ion-item>
+    <ion-item><ion-text color="primary">4&nbsp;&nbsp;</ion-text>Instale el sellador y reinstale el núcleo de la válvula. <ion-text color="danger">NO instale más de la cantidad recomendada para aplicaciones de alta velocidad</ion-text>.</ion-item>
+    <ion-item><ion-text color="primary">5&nbsp;&nbsp;</ion-text>Inflame neumático para neumáticos fabrica la presión recomendada y vuelva a instalar la tapa del vástago de la válvula.</ion-item>
+    <ion-item><ion-text color="primary">6&nbsp;&nbsp;</ion-text>Gire o mueva inmediatamente el equipo para sellar las perforaciones existentes, especialmente si se retiran los objetos después de instalar el sellador.</ion-item>
+  </ion-list>
+</div>
+
 </ion-content>

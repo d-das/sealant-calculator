@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ContactPage } from './contact/contact.page';
 import { InstructionsPage } from './instructions/instructions.page';
 
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { InstructionsPage } from './instructions/instructions.page';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    FormsModule
   ],
   exports: [
     ContactPage,
