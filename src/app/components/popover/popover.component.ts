@@ -41,7 +41,7 @@ export class PopoverComponent implements OnInit {
   }
 
   async dismissPopover(){
-    console.log("diss");
+    // console.log("diss");
     return await this.popoverCtrl.dismiss();
   }
 

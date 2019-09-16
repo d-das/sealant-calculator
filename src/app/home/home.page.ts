@@ -19,7 +19,7 @@ export class HomePage {
 
 
   async presentPopover(event: any) {
-    console.log("event:", event);
+    // console.log("event:", event);
     const popover = await this.popoverCtrl.create({
       component: PopoverComponent,
       event: event,

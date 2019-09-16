@@ -40,7 +40,7 @@ export class CalculatorComponent implements OnInit {
     }
     let x:number = (this.sWidth*this.sRim)*this.factorA;
     if(this.roadType == "offRoad"){
-      console.log("x:", x);
+      // console.log("x:", x);
       this.fluidOz = x*this.factorB;
     }
     else{
@@ -52,8 +52,8 @@ export class CalculatorComponent implements OnInit {
     //round out the floats
     this.fluidOz = parseFloat(this.fluidOz.toFixed(1));
     this.handPumps = parseFloat(this.handPumps.toFixed(1));
-    console.log("fluidOz:", this.fluidOz);
-    console.log("handPumps:", this.handPumps);
+    // console.log("fluidOz:", this.fluidOz);
+    // console.log("handPumps:", this.handPumps);
 
   }
 

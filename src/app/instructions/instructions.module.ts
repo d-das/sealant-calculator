@@ -21,6 +21,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [InstructionsPage]
+  declarations: [InstructionsPage],
+  entryComponents: [InstructionsPage]
 })
 export class InstructionsPageModule {}

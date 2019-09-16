@@ -9,34 +9,29 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { ContactPage } from './contact/contact.page';
-import { InstructionsPage } from './instructions/instructions.page';
 import { PopoverComponent } from './components/popover/popover.component';
 
 import { FormsModule } from '@angular/forms';
+import { InstructionsPageModule } from './instructions/instructions.module';
+import { ContactPageModule } from './contact/contact.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactPage,
-    InstructionsPage,
-    PopoverComponent
-  ],
-  entryComponents: [
-    ContactPage,
-    InstructionsPage,
     PopoverComponent
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    InstructionsPageModule,
+    ContactPageModule
   ],
-  exports: [
-    ContactPage,
-    InstructionsPage
+  entryComponents: [
+
+    PopoverComponent
   ],
   providers: [
     StatusBar,
