@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.scss'],
+  providers: [Keyboard]
 })
 export class CalculatorComponent implements OnInit {
 
@@ -25,7 +27,8 @@ export class CalculatorComponent implements OnInit {
   public handPumps: number = 0;
   public applicationOz: number = 0;
 
-  constructor() { }
+
+  constructor(private keyboard: Keyboard) { }
 
   ngOnInit() {}
 
@@ -55,6 +58,10 @@ export class CalculatorComponent implements OnInit {
     // console.log("fluidOz:", this.fluidOz);
     // console.log("handPumps:", this.handPumps);
 
+  }
+
+  handleEnter(){
+    this.keyboard.hide();
   }
 
   ngDoCheck(){

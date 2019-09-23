@@ -12,8 +12,6 @@ import { IonicModule } from '@ionic/angular';
     CommonModule,
     IonicModule,
     FormsModule,
-
-
   ],
   exports: [
     CalculatorComponent,
