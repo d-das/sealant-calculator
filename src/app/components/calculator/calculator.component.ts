@@ -10,7 +10,7 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
 export class CalculatorComponent implements OnInit {
 
   public sysMeasure:string = 'standard';
-  public roadType:string = 'onRoad';
+  public roadType:string = 'offRoad';
   //sealant factor
   private factorA:number = 0.1780327;
   // offroad factor
