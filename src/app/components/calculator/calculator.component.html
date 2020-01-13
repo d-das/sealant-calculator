@@ -1,9 +1,9 @@
 <ion-list-header>SYSTEM OF MEASUREMENT</ion-list-header>
 <ion-segment [(ngModel)]="sysMeasure" ionChange="onChange($event)">
-  <ion-segment-button value="standard">
+  <ion-segment-button value="standard" (click)="wipeInput()">
     <ion-label>STANDARD</ion-label>
   </ion-segment-button>
-  <ion-segment-button value="metric">
+  <ion-segment-button value="metric" (click)="wipeInput()">
     <ion-label>METRIC</ion-label>
   </ion-segment-button>
 </ion-segment>
@@ -17,12 +17,21 @@
   </ion-segment-button>
 </ion-segment>
 <ion-item>
-  <ion-label position="floating">Tire Width</ion-label>
-  <ion-input type="number"[(ngModel)]="width" (keyup.enter)="handleEnter()"></ion-input>
+  <!-- <ion-label position="floating">Tire Width</ion-label> -->
+  <ion-input type="number"[(ngModel)]="width" placeholder="Tire Width" (keyup.enter)="handleEnter()"></ion-input>
+  <ion-chip *ngIf="sysBool" color="primary">
+    <ion-label>inches</ion-label>
+  </ion-chip>
+  <ion-chip *ngIf="!sysBool" color="primary">
+    <ion-label>mm</ion-label>
+  </ion-chip>
 </ion-item>
 <ion-item>
-  <ion-label position="floating">Rim / Wheel Size</ion-label>
-  <ion-input type="number" [(ngModel)]="rim" (keyup.enter)="handleEnter()"></ion-input>
+  <!-- <ion-label position="floating">Tire Diameter</ion-label> -->
+  <ion-input type="number" [(ngModel)]="rim" placeholder="Wheel Diameter/Size" (keyup.enter)="handleEnter()"></ion-input>
+  <ion-chip color="primary">
+    <ion-label>inches</ion-label>
+  </ion-chip>
 </ion-item>
 
 

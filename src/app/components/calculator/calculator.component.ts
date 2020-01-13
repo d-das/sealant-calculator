@@ -10,6 +10,7 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
 export class CalculatorComponent implements OnInit {
 
   public sysMeasure:string = 'standard';
+  public sysBool:boolean = true;
   public roadType:string = 'offRoad';
   //sealant factor
   private factorA:number = 0.1780327;
@@ -19,8 +20,8 @@ export class CalculatorComponent implements OnInit {
   private factorC:number = 8;
   // inches factor
   private factorD:number = 0.0393701;
-  public width:number = 0;
-  public rim:number = 0;
+  public width:number = null;
+  public rim:number = null;
   private sWidth:number = 0;
   private sRim:number = 0;
   public fluidOz: number = 0;
@@ -33,6 +34,13 @@ export class CalculatorComponent implements OnInit {
   ngOnInit() {}
 
   calculate(){
+    if(this.sysMeasure == 'standard'){
+      this.sysBool = true;
+    }
+    else{
+      this.sysBool = false;
+    }
+
     if(this.sysMeasure == "metric"){
       this.sWidth=this.width*this.factorD;
       this.sRim=this.rim*this.factorD;
@@ -49,7 +57,7 @@ export class CalculatorComponent implements OnInit {
     else{
       this.fluidOz =x;
     }
-    this.applicationOz = Math.ceil(this.fluidOz/4)*4;
+    this.applicationOz = (this.fluidOz % 4) >= 2 ? Math.floor(this.fluidOz / 4) * 4 + 4 : Math.floor(this.fluidOz / 4) * 4;
     this.handPumps = this.applicationOz/this.factorC;
 
     //round out the floats
@@ -60,11 +68,18 @@ export class CalculatorComponent implements OnInit {
 
   }
 
+  wipeInput(){
+    this.width = null;
+    this.rim = null;
+  }
+
   handleEnter(){
     this.keyboard.hide();
   }
 
   ngDoCheck(){
+    // console.log("rim: ", this.rim);
+    // console.log("diam: ", this.width);
     this.calculate();
   }
 }
