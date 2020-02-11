@@ -43,7 +43,7 @@ export class CalculatorComponent implements OnInit {
 
     if(this.sysMeasure == "metric"){
       this.sWidth=this.width*this.factorD;
-      this.sRim=this.rim*this.factorD;
+      this.sRim=this.rim;
     }
     else{
       this.sWidth = this.width;
