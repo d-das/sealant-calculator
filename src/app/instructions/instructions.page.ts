@@ -10,6 +10,10 @@ import { ModalController } from '@ionic/angular';
 export class InstructionsPage implements OnInit {
   public language:string = "english";
   public langBool:boolean = true;
+  public pic1path:string = "assets/images/pictorial-1.jpeg";
+  public alttext1:string = "Dimensions";
+  public pic2path:string = "assets/images/pictorial-2.jpeg";
+  public alttext2:string = "Tire Info";
 
   constructor(public modalCtrl: ModalController) { }
 

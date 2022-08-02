@@ -15,6 +15,16 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Dimensions Info</ion-label>
+      <ion-img src="{{pic1path}}" alt="{{alttext1}}"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tire Info</ion-label>
+      <ion-img src="{{pic2path}}" alt="{{alttext2}}"></ion-img>
+    </ion-item>
+  </ion-list>
   <ion-segment [(ngModel)]="language" ionChange="onChange($event)">
     <ion-segment-button value="english">
       <ion-label>ENGLISH</ion-label>

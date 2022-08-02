@@ -1,4 +1,4 @@
-<ion-list-header>SYSTEM OF MEASUREMENT</ion-list-header>
+<ion-list-header>SYSTEM OF MEASUREMENT:</ion-list-header>
 <ion-segment [(ngModel)]="sysMeasure" ionChange="onChange($event)">
   <ion-segment-button value="standard" (click)="wipeInput()">
     <ion-label>STANDARD</ion-label>
@@ -7,13 +7,13 @@
     <ion-label>METRIC</ion-label>
   </ion-segment-button>
 </ion-segment>
-<ion-list-header>TIRE USE</ion-list-header>
+<ion-list-header>TIRE USE:</ion-list-header>
 <ion-segment  [(ngModel)]="roadType" ionChange="onChange($event)">
   <ion-segment-button value="offRoad">
-    <ion-label>OFF ROAD</ion-label>
+    <ion-label>OFF ROAD <br>(BELLOW 40 MPH)</ion-label>
   </ion-segment-button>
   <ion-segment-button value="onRoad">
-    <ion-label>ON ROAD</ion-label>
+    <ion-label>ON ROAD <br>(ABOVE 40 MPH)</ion-label>
   </ion-segment-button>
 </ion-segment>
 <ion-item>
