@@ -1,9 +1,9 @@
 <ion-list>
-  <ion-item button item-right (click)="presentInstructions()" color="light">
+  <ion-item button item-right routerLink="/instructions" routerLinkActive="active" ariaCurrentWhenActive="page">
     <ion-icon color="secondary" name="help-circle"></ion-icon>
     Instructions
   </ion-item>
-  <ion-item button icon-only item-right (click)="presentContact()" color="light">
+  <ion-item button routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page" color="light">
     <ion-icon color="secondary" name="at"></ion-icon>
     Contact
   </ion-item>
