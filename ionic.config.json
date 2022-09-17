@@ -1,7 +1,8 @@
 {
   "name": "sealant-calculator",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }
