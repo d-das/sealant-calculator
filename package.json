@@ -67,7 +67,7 @@
     "@typescript-eslint/eslint-plugin": "5.36.2",
     "@typescript-eslint/parser": "5.36.2",
     "codelyzer": "^6.0.2",
-    "cordova-android": "^8.0.0",
+    "cordova-android": "^11.0.0",
     "eslint": "^8.23.0",
     "jasmine-core": ">=3.5",
     "jasmine-spec-reporter": "~4.2.1",
